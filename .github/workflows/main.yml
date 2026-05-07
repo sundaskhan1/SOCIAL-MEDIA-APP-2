@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} ./SOCIAL-MEDIA-APP-2
+          docker build -t sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} ./
 
       - name: Push Docker image
         run: |

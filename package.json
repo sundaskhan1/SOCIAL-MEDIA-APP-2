@@ -9,5 +9,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "devDependencies": {},
- 
+  "author": "huzz",
+  "license": "MIT",
+  "description": "Simple DevOps demo app for testing CI/CD pipelines"
 }

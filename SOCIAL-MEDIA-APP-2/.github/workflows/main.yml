@@ -29,6 +29,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} .
+
       - name: Push Docker image
         run: |
           docker push sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }}
@@ -36,3 +37,4 @@ jobs:
       - name: Tag and push latest
         run: |
           docker tag sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} sundasjamshed2/demo_nodejs_webpage:latest
+          docker push sundasjamshed2/demo_nodejs_webpage:latest

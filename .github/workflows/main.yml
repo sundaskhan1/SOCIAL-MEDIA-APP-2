@@ -36,5 +36,5 @@ jobs:
 
       - name: Tag and push latest
         run: |
-          docker tag sundaskhan2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} sundaskhan2/demo_nodejs_webpage:latest
+          docker tag sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} sundasjamshed2/demo_nodejs_webpage:latest
           docker push sundaskhan2/demo_nodejs_webpage:latest

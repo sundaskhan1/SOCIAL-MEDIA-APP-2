@@ -28,13 +28,12 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t sundaskhan2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} ./SOCIAL-MEDIA-APP-2
-
+          docker build -t sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} .
       - name: Push Docker image
         run: |
-          docker push sundaskhan2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }}
+          docker push sundasjamshed2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }}
 
       - name: Tag and push latest
         run: |
-          docker tag sundaskhan2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} sundaskhan2/demo_nodejs_webpage:latest
-          docker push sundaskhan2/demo_nodejs_webpage:latest
+          docker tag sundaskhan2/demo_nodejs_webpage:${{ steps.vars.outputs.TAG }} sundasjamshed2/demo_nodejs_webpage:latest
+          docker push sundasjamshed2/demo_nodejs_webpage:latest

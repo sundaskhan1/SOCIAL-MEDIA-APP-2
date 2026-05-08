@@ -19,12 +19,12 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t sundasjamshed2/social media app:circleci .
+            docker build -t sundasjamshed2/social_media_app:circleci .
 
       - run:
           name: Push Docker image
           command: |
-            docker push sundasjamshed2/social media app:circleci
+            docker push sundasjamshed2/social_media_app:circleci
 
 workflows:
   build-and-deploy:

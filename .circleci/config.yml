@@ -1,0 +1,36 @@
+version: 2.1
+
+jobs:
+  build-and-push:
+    docker:
+      - image: cimg/base:stable
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          docker_layer_caching: true
+
+      - run:
+          name: Log in to Docker Hub
+          command: |
+            echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t sundasjamshed2/social media app:circleci .
+
+      - run:
+          name: Push Docker image
+          command: |
+            docker push sundasjamshed2/social media app:circleci
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - build-and-push:
+          filters:
+            branches:
+              only:
+                - main
